@@ -1,21 +1,22 @@
 import { fileURLToPath } from "url"
 import fs from "fs"
 
-// limit
 const limit = {
-   free: 25,
-   premium: 250,
+   free: 100, // زودت ليك الحد المجاني
+   premium: "Infinity",
    VIP: "Infinity",
    download: {
-      free: 30000000, // use byte
-      premium: 100000000, // use byte
-      VIP: 1130000000, // use byte 
+      free: 50000000, // 50 ميجا
+      premium: 1000000000, 
+      VIP: 1130000000, 
    }
 }
 
-
 export default {
    limit,
+   // ضفت ليك مكان لمفتاح Gemini هنا
+   geminiKey: "AIzaSyClhwcczg1EWDXgybClgLgzBxCDquQFi5E", 
+   
    APIs: {
       xzn: {
          URI: 'https://xzn.wtf',
@@ -24,46 +25,40 @@ export default {
    },
 
    msg: {
-      owner: 'Perintah ini hanya dapat digunakan oleh Owner!',
-      group: 'Perintah ini hanya dapat digunakan di group!',
-      private: 'Perintah ini hanya dapat digunakan di private chat!',
-      admin: 'Perintah ini hanya dapat digunakan oleh admin group!',
-      botAdmin: 'Bot bukan admin, tidak dapat mengakses fitur tersebut',
-      bot: 'Fitur ini hanya dapat diakses oleh Bot',
-      locked: 'Fitur ini telah dinonaktifkan!',
-      media: 'Reply media...',
-      error: "Sepertinya ada kesalahan. bot gagal dalam mengeksekusi...",
-      quoted: "Reply message...",
-      wait: "",
-      premium: "Perintah ini hanya dapat digunakan oleh pengguna premium!",
-      vip: "Perintah ini hanya dapat digunakan oleh pengguna VIP!",
-      dlFree: `File over ${formatSize(limit.download.free)} can only be accessed by premium users`,
-      dlPremium: `WhatsApp Web cannot send files larger than ${formatSize(limit.download.premium)}`,
-      dlVIP: `WhatsApp cannot send files larger than ${formatSize(limit.download.VIP)}`
+      owner: 'يا بشمهندس الأمر ده خاص بصاحب البوت بس! 🏗️',
+      group: 'الأمر ده شغال في المجموعات بس!',
+      private: 'تقدر تستخدم الأمر ده في الخاص بس!',
+      admin: 'لازم تكون أدمن عشان تنفذ الطلب ده 📐',
+      botAdmin: 'ارفعني أدمن الأول عشان أقدر أساعدك!',
+      bot: 'خاصية حصرية لكارين فقط 👷‍♀️',
+      locked: 'الميزة دي مقفولة حالياً!',
+      media: 'أرسل لي الصورة أو الفيديو المطلوب..',
+      error: "حصل مشكلة في السيستم، جرب تاني يا هندسة..",
+      quoted: "اعمل رد (Reply) على الرسالة..",
+      wait: "جاري التنفيذ.. استناني ثواني ⏳",
+      premium: "الميزة دي للمهندسين المميزين (Premium) بس!",
    },
 
    options: {
-      public: true,
-      URI: "database.json", // use mongo or file json
-      owner: ["6288292024190", "62858156631709"],
+      public: true, // خليه true عشان أي زول يقدر يستخدمه
+      URI: "database.json",
+      owner: ["966502336325"], // امسح الأرقام دي وحط رقمك بالكود الدولي (مثلاً 249 للسنودان)
       pathCommand: 'commands'
    },
 
    Exif: {
-      packId: "https://instagram.com/cak_haho",
-      packName: `Sticker ini Dibuat Oleh :`,
-      packPublish: "Dika Ardnt.",
-      packEmail: "dika.ardianta7@yahoo.com",
-      packWebsite: "https://instgaram.com/cak_haho",
-      androidApp: "https://play.google.com/store/apps/details?id=com.bitsmedia.android.muslimpro",
-      iOSApp: "https://apps.apple.com/id/app/muslim-pro-al-quran-adzan/id388389451?|=id",
-      categories: ['😹', '😎', '😱'],
+      packId: "Karen-Bot",
+      packName: `ستيكر بواسطة:`,
+      packPublish: "Karen", // ده الاسم الحيظهر في الاستيكر
+      packEmail: "karen@civil.eng",
+      packWebsite: "https://google.com",
+      categories: ['🏗️', '📐', '👷‍♀️'],
       isAvatar: 0
    },
 
    session: {
       Path: "session",
-      Name: "hisoka"
+      Name: "karen_session"
    }
 }
 
