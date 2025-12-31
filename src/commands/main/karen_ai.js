@@ -1,6 +1,5 @@
 import { GoogleGenerativeAI } from "@google/generative-ai";
-import config from "../../config.js";
-
+import config from "../../../config.js";
 export default {
    name: "ai",
    command: ["karen", "ai", "كارين"], // كارين هترد لو ناديتها بأساميها دي
